@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3e8dc;
+      color: #3b3b3b;
+    }
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      position: relative;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #3b3b3b;
+      font-weight: bold;
+      padding: 0.5rem 1.5rem;
+      background-color: #f7ebdd;
+      transition: all 0.3s ease;
+      border: 2px solid #3b3b3b;
+      border-radius: 999px;
+    }
+    nav a:hover {
+      background-color: #3b3b3b;
+      color: #fff;
+      transform: scale(1.1);
+    }
+    nav a.active {
+      background-color: #3b3b3b;
+      color: #fff;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f5eadd;
+      border-radius: 20px;
+      margin: 2rem;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      flex: 1 1 5%;
+    }
+    .hero-text {
+      flex: 1 1 50%;
+      padding: 1rem;
+      background-color: #d0c7bd;
+      border-radius: 20px;
+      color: #3b3b3b;
+      font-weight: bold;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero-text h1 {
+      font-size: 6.5rem;
+      margin: 0;
+    }
+    section {
+      padding: 0 2rem 2rem;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+    section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .function {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .function:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .function img {
+      width: 200px;
+      height: auto;
+      border-radius: 20px;
+      margin-right: 1.5rem;
+      transition: transform 0.4s ease;
+    }
+    .function img:hover {
+      transform: scale(1.1);
+    }
+    .function-text {
+      max-width: 600px;
+    }
+    .function span {
+      display: block;
+      font-weight: bold;
+      color: #7a5d45;
+    }
+    .function h3 {
+      margin: 0.2rem 0;
+      font-size: 1.5rem;
+    }
+  </style>
+  <script>
+    // Animate nav buttons in on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('nav a');
+      links.forEach((link, i) => {
+        link.style.opacity = '0';
+        link.style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+          link.style.transition = 'all 0.5s ease';
+          link.style.opacity = '1';
+          link.style.transform = 'translateY(0)';
+        }, i * 150);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div><strong>Skeletal System</strong></div>
+    <nav>
+      <a href="index.html" class="active">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="facts.html">FACTS</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="1.jpg" alt="Skeletal Diagram">
+    <div class="hero-text">
+      <h1>Main Functions (Jobs) of the Skeletal System</h1>
+    </div>
+  </div>
+
+  <section>
+    <h2>What are the functions of the skeletal system?</h2>
+    <p>"The skeletal system plays many roles in the body—some are more obvious than others, but each one is essential for overall health. Its main responsibilities include:"</p>
+
+    <div class="function">
+      <img src="shapes-body.jpg" alt="Shaping Body">
+      <div class="function-text">
+        <span>01</span>
+        <h3>Shaping your body</h3>
+        <p>Your skeleton holds up your body’s weight and provides a structure for muscles and other tissues to attach to.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="helps-you-move.jpg" alt="Movement Support">
+      <div class="function-text">
+        <span>02</span>
+        <h3>Movement support</h3>
+        <p>Your muscles, joints, and connective tissues work together with your skeleton to allow your body to move smoothly and efficiently.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="protects-organs.jpg" alt="Organ Protection">
+      <div class="function-text">
+        <span>03</span>
+        <h3>Organ protection</h3>
+        <p>Your bones act like internal armor, shielding vital organs. For example, the skull guards your brain, your ribcage protects your heart and lungs, and your spine surrounds your spinal cord.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="bone-marrow.jpg" alt="Blood Cell Production">
+      <div class="function-text">
+        <span>04</span>
+        <h3>Blood cell production</h3>
+        <p>The soft marrow inside certain bones produces essential blood cells, including red and white cells that help keep your body functioning properly.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="stores-minerals.jpg" alt="Mineral Storage">
+      <div class="function-text">
+        <span>05</span>
+        <h3>Mineral storage</h3>
+        <p>Bones serve as storage centers for crucial minerals such as calcium and vitamin D, helping to maintain the body’s mineral balance.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <center>
+      <p>¹ Information sourced from the Cleveland Clinic. Skeletal System. Available at:
+        <a href="https://my.clevelandclinic.org/health/body/21048-skeletal-system" target="_blank">
+          https://my.clevelandclinic.org/health/body/21048-skeletal-system
+        </a>. Accessed May 7, 2025.
+      </p>
+    </center>
+  </footer>
+</body>
+</html>

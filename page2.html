@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+      /* Top Left Title */
+    .top-left-title {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #483528;
+      z-index: 100;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+	
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3e8dc;
+      color: #3b3b3b;
+    }
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 15px;
+      z-index: 100;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .menu a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 40px;
+      background-color: #f7ebdd;
+      color: #483528;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      border: 2px solid #483528;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .navbar .menu a:hover {
+      transform: scale(1.1);
+      background-color: #a6a6a6;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f5eadd;
+      border-radius: 20px;
+      margin: 2rem;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      flex: 1 1 5%;
+    }
+    .hero-text {
+      flex: 1 1 50%;
+      padding: 1rem;
+      background-color: #d0c7bd;
+      border-radius: 20px;
+      color: #3b3b3b;
+      font-weight: bold;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero-text h1 {
+      font-size: 6.5rem;
+      margin: 0;
+    }
+    section {
+      padding: 0 2rem 2rem;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+    section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .function {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .function:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .function img {
+      width: 200px;
+      height: auto;
+      border-radius: 20px;
+      margin-right: 1.5rem;
+      transition: transform 0.4s ease;
+    }
+    .function img:hover {
+      transform: scale(1.1);
+    }
+    .function-text {
+      max-width: 600px;
+    }
+    .function span {
+      display: block;
+      font-weight: bold;
+      color: #7a5d45;
+    }
+    .function h3 {
+      margin: 0.2rem 0;
+      font-size: 1.5rem;
+    }
+  </style>
+  <script>
+    // Animate nav buttons in on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('nav a');
+      links.forEach((link, i) => {
+        link.style.opacity = '0';
+        link.style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+          link.style.transition = 'all 0.5s ease';
+          link.style.opacity = '1';
+          link.style.transform = 'translateY(0)';
+        }, i * 150);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="top-left-title">Skeletal System</div>
+
+  <div class="navbar">
+    <div class="menu">
+      <a href="index.html" class="active">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="facts.html">FACTS</a>
+    </div>
+  </div>
+  
+  <div class="hero">
+    <img src="1.jpg" alt="Skeletal Diagram">
+    <div class="hero-text">
+      <h1>Beyond the Bones</h1>
+    </div>
+  </div>
+
+  <section>
+    <h2>What's Really in the Skeletal System?</h2>
+    <p>"When people think of the skeletal system, they usually imagine a model skeleton standing in a science classroom. But there’s a lot more to it than just bones! Your skeletal system is a complex structure made up of different parts that work together to support, protect, and move your body."</p>
+ <h2>Here are the main components:</h2>
+    <div class="function">
+      <img src="bones.jpg" alt="Shaping Body">
+      <div class="function-text">
+        <span>01</span>
+        <h3>Bones</h3>
+        <p>These are the framework of your body, giving it shape and support. Adults typically have between 206 and 213 bones.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="helps-you-move.jpg" alt="Movement Support">
+      <div class="function-text">
+        <span>02</span>
+        <h3>Muscles</h3>
+        <p>You have over 600 muscles that help you move, breathe, and even digest food. They’re made of stretchy, woven fibers.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="cartilage.jpg" alt="Organ Protection">
+      <div class="function-text">
+        <span>03</span>
+        <h3>Cartilage</h3>
+        <p>This flexible, rubbery tissue cushions your joints and keeps bones from grinding against each other.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="ligament.jpg" alt="Blood Cell Production">
+      <div class="function-text">
+        <span>04</span>
+        <h3>Ligaments</h3>
+        <p>These are strong bands of tissue that connect bones to other bones, helping stabilize your joints.</p>
+      </div>
+    </div>
+
+    <div class="function">
+      <img src="tendon.jpg" alt="Mineral Storage">
+      <div class="function-text">
+        <span>05</span>
+        <h3>Tendons</h3>
+        <p>These tough cords attach muscles to bones, allowing your muscles to move your skeleton</p>
+      </div>
+    </div>
+	
+	<div class="function">
+      <img src="joint.jpg" alt="Mineral Storage">
+      <div class="function-text">
+        <span>06</span>
+        <h3>Joints</h3>
+        <p>A joint is where two bones meet. It includes some or all of the parts above and allows for movement in different directions.</p>
+      </div>
+    </div>
+	
+  </section>
+  <footer>
+  <center>
+    <p>¹ Information sourced from the Cleveland Clinic. Skeletal System. Available at: 
+      <a href="https://my.clevelandclinic.org/health/body/21048-skeletal-system" target="_blank">
+        https://my.clevelandclinic.org/health/body/21048-skeletal-system
+      </a>. Accessed May 7, 2025.
+    </p>
+  </center>
+</footer>
+</body>
+</html>
